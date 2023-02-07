@@ -1,0 +1,117 @@
+:root {
+    --backColor: rgba(244, 244, 244, 0.3);
+    --boxColor: #f0f0f0;
+    --textColor: gray;
+    --maincolor: #78d024;
+    --lightGrey: #e0e0e0;
+    --kakaoColor: #F7E600;
+}
+body{
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    background-color: var(--backColor);
+}
+a{
+    text-decoration-line: none;
+    color: black;
+}
+
+form{
+    border-radius: 20px;
+    margin: 30px 0;
+    background-color: white;
+}
+input,.autoHeightTextarea textarea {
+    border: 0;
+    padding: 10px;
+    outline: none;
+    border-radius: 20px;
+ }
+input[type=submit] {
+    text-align: center;
+    background-color: initial;
+}
+.nav{
+    display: flex;
+    justify-content: right;
+    margin: 40px 0;
+}
+.nav :link {
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    margin: 5px;
+    backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 1); border-radius: 20px; box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5), inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);   
+}
+.large{
+    text-align: initial;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+footer{
+    padding: 20px;
+}
+.initial{
+    position: absolute;
+    background-color: initial;
+    color:black;
+    right: 20px;
+    margin:0 auto;
+    font-size: 1.2rem;
+}
+
+.image-button{
+    background-color: white;
+    padding: 20px;
+}
+button {
+    color: white;
+    border: 0;
+    background-color: var(--maincolor);
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 30px;
+}
+
+/* MainPage css */
+.diary-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.big-button {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    font-size: 3rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+/* DiaryFactory & DiaryPage CSS */
+.form-wrap, .diary-shown-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+.bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgb(0,0,0,0.5);
+}
+
+
+/* 그림자 */
+.title-wrap, .nav :link, .card, .big-button, .image-button{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
