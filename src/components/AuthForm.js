@@ -38,7 +38,7 @@ const AuthForm = () => {
     }
     return(
         <>
-        <div class="title">웰컴 👋🎉</div>
+        <h2>방가 👋🎉</h2>
         <form onSubmit ={onSubmit}>
             <input name = "email" type ="text" placeholder="이메일" required value={email} onChange={onChange}/>
             <input name = "password" type="password" placeholder="비밀번호" required value={password} onChange={onChange}/>

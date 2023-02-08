@@ -28,7 +28,7 @@ const Profile = ({ userObj, refreshUser }) => {
     };
     return(
         <>
-        <div class="title">안녕하세요, {userObj.displayName}님!</div>
+        <div class="sub">안녕하세요, {userObj.displayName}님!</div>
         <form onSubmit={onSubmit}>
             <input onChange={onChange} type="text" placeholder="display name" value={newDisplayName} />
             <input type="submit" value="업데이트" />

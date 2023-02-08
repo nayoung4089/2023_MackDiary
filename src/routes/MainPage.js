@@ -30,6 +30,7 @@ const MainPage = ({ userObj }) => {
 
     return (
         <>
+        <div class="sub"> {userObj.displayName}</div>
         <div class="diary-wrap">
         {diaries
             .filter((data)=> data.createrId === userObj.uid)

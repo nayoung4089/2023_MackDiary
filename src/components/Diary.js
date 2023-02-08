@@ -15,7 +15,7 @@ const Diary = ({userObj, diaryObj, isOwner}) => {
     // 내가 주인일 때만 버튼이 나오기
     // 지우기 버튼
     const onDeleteClick = async () => {
-        const ok = window.confirm("Are you sure you want to delete this diary?");
+        const ok = window.confirm("정말로 일기를 지우시겠습니까?");
         console.log(ok);
         if(ok){
             await dbService.doc(`diaries/${diaryObj.id}`).delete();
