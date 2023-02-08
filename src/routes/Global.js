@@ -17,6 +17,7 @@ const Global = ({ userObj }) => {
 
     return(
         <div>
+            <div class="large">Global</div>
             <div class="diary-wrap">
                 {diaries.filter((data)=> data.global === true).map((diary) =>(
                     <DiaryPage 

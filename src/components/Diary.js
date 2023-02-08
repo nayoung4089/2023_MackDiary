@@ -4,6 +4,7 @@ import DiaryFactory from "./DiaryFactory";
 
 const Diary = ({userObj, diaryObj, isOwner}) => {
     // 자세한 페이지 : 남의 거나 내거나 모두
+    const [newTitle, setNewTitle] = useState(diaryObj.title);
     const [editing, setEditing] = useState(false);
     const [newDiary, setNewDiary] = useState(diaryObj.text);
     const [newAttachment, setNewAttachment] = useState("");
@@ -41,6 +42,8 @@ const Diary = ({userObj, diaryObj, isOwner}) => {
                     <DiaryFactory 
                     saveableCanvas={loadableCanvas}
                     isOwner={isOwner}
+                    title={newTitle}
+                    setTitle={setNewTitle}
                     diary={newDiary} 
                     setDiary={setNewDiary} 
                     saveData={newSaveImage}
@@ -57,12 +60,10 @@ const Diary = ({userObj, diaryObj, isOwner}) => {
                 ) : (
                 <>
                 <div class="diary">
-                <div>
-                    <span>{diaryObj.date}</span>
-                    <span>작성자: {userObj.displayName}</span>
-                </div>
-                {diaryObj.attachmentUrl && <img src={diaryObj.attachmentUrl} width="300px" height="300px" />}
-                <h4>{diaryObj.text}</h4>
+                <h3>{diaryObj.date}</h3>
+                <h3>{diaryObj.title}</h3>
+                {diaryObj.attachmentUrl && <img src={diaryObj.attachmentUrl} width="300px" height="300px" alt="saved"/>}
+                <div>{diaryObj.text}</div>
                 </div>
                 </>
                 )

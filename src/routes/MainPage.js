@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 const MainPage = ({ userObj }) => {
     // 기본 이미지들만 있다가 + 누르면 신규 생성 / 사진은 DiaryPage로 관리
+    const [title, setTitle] = useState("");
     const [diary, setDiary] = useState("");
     let [attachment, setAttachment] = useState("");
     const [diaries, setDiaries] = useState([]);
@@ -46,6 +47,8 @@ const MainPage = ({ userObj }) => {
         <>
         <DiaryFactory 
         saveableCanvas = {saveableCanvas}
+        title={title}
+        setTitle={setTitle}
         diary={diary} 
         setDiary={setDiary} 
         userObj={userObj} 
