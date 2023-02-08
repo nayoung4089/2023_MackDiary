@@ -2,9 +2,9 @@
     --backColor: rgba(244, 244, 244, 0.3);
     --boxColor: #f0f0f0;
     --textColor: gray;
-    --maincolor: #1951E6;
+    --maincolor: rgb(14,114,237);
     --lightGrey: #e0e0e0;
-    --kakaoColor: #F7E600;
+    --kakaoColor: #1951E6;
 }
 body{
     margin: 0 auto;
