@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/2023_MackDiary/static/css/main.adc5aa0f.css",
-    "main.js": "/2023_MackDiary/static/js/main.1f07a28e.js",
+    "main.css": "/2023_MackDiary/static/css/main.f7f75a05.css",
+    "main.js": "/2023_MackDiary/static/js/main.367cf057.js",
     "index.html": "/2023_MackDiary/index.html",
-    "main.adc5aa0f.css.map": "/2023_MackDiary/static/css/main.adc5aa0f.css.map",
-    "main.1f07a28e.js.map": "/2023_MackDiary/static/js/main.1f07a28e.js.map"
+    "main.f7f75a05.css.map": "/2023_MackDiary/static/css/main.f7f75a05.css.map",
+    "main.367cf057.js.map": "/2023_MackDiary/static/js/main.367cf057.js.map"
   },
   "entrypoints": [
-    "static/css/main.adc5aa0f.css",
-    "static/js/main.1f07a28e.js"
+    "static/css/main.f7f75a05.css",
+    "static/js/main.367cf057.js"
   ]
 }
