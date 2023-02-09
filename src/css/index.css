@@ -11,6 +11,7 @@ body{
     width: 300px;
     text-align: center;
     background-color: var(--backColor);
+    white-space: pre-wrap;
 }
 a{
     text-decoration-line: none;

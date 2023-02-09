@@ -3,7 +3,7 @@ import { dbService } from "fbase";
 import AutoHeightTextarea from "./AutoHeightTextarea";
 import CanvasDraw from "react-canvas-draw";
 
-const DiaryFactory = ({ saveableCanvas, title, setTitle, diary, setDiary, saveData, userObj, attachment, setAttachment, saveImage, setSaveImage, makeNew, diaryObj, setClear, onClick }) => {
+const DiaryFactory = ({ saveableCanvas, title, setTitle, strong, setStrong, deep, setDeep, fast, setFast, diary, setDiary, saveData, userObj, attachment, setAttachment, saveImage, setSaveImage, makeNew, diaryObj, setClear, onClick }) => {
     const [global, setGlobal] = useState(false);
     // input 창만 전적으로 담당
     const onErase = () => {
@@ -15,11 +15,12 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, diary, setDiary, saveDa
     const onGlobal = () => {
         setGlobal(prev => !prev);
     }
-    const onChange = (event) => {
+    const onChange = (event, setTitle) => {
         const {
           target: { value },
         } = event;
         setTitle(value);
+        console.log(value);
     };
 
     // diaryFactory onSubmit
@@ -32,6 +33,9 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, diary, setDiary, saveDa
         let nowDate = new Date();
         const diaryObj = {
             title: title,
+            strong: strong,
+            deep: deep,
+            fast: fast,
             text: diary,
             createdAt: nowDate,
             date: `${nowDate.getFullYear()}년 ${nowDate.getMonth()+1}월 ${nowDate.getDate()}일`,
@@ -56,6 +60,9 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, diary, setDiary, saveDa
         // 업데이트
         await dbService.doc(`diaries/${diaryObj.id}`).update({
             title: title,
+            strong: strong,
+            deep: deep,
+            fast: fast,
             text: diary,
             attachmentUrl: attachment,
             saveImage: saveImage,
@@ -76,19 +83,42 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, diary, setDiary, saveDa
         <form onSubmit={makeNew ? onSubmit : onEditSubmit}>
             <input
               type="text"
-              placeholder="제목을 입력하세요"
+              placeholder="예상되는 맥 & 제목"
               value={title}
               required
-              onChange={onChange}
+              onChange={(event)=>{onChange(event,setTitle)}}
             />
             <CanvasDraw 
             ref={(canvasDraw)=>(saveableCanvas = canvasDraw)}
             saveData={saveData}
             canvasWidth={300}
-	        canvasHeight={300}
+	        canvasHeight={150}
             brushRadius={5}
             enablePanAndZoom
             />
+            <div>
+                <span>세기 </span>
+                <select name="strong" onChange={(event)=>{onChange(event,setStrong)}} value={strong}>
+                    <option value="유력">유력</option>
+                    <option value="무력">무력</option>
+                </select>
+            </div>
+            <div>
+                <span>위치 </span>
+                <select name="deep" onChange={(event)=>{onChange(event,setDeep)}} value={deep}>
+                    <option value="부">부</option>
+                    <option value="중">중</option>
+                    <option value="침">침</option>
+                </select>
+            </div>
+            <div>
+                <span>빠르기 </span>
+                <select name="fast" onChange={(event)=>{onChange(event,setFast)}} value={fast}>
+                    <option value="지">지</option>
+                    <option value="평">평</option>
+                    <option value="삭">삭</option>
+                </select>
+            </div>
             <AutoHeightTextarea diary={diary} setDiary={setDiary} />
             <input type="submit" value="Save" />
         </form>

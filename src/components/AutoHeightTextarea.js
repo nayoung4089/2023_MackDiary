@@ -41,7 +41,7 @@ const AutoHeightTextarea = ({diary, setDiary}) => {
             placeholder="오늘의 맥진 일기"
             onChange={checkItemChangeHandler}
             onKeyDown={checkItemEnterHandler}
-            style={{height: ((lineHeight * 27) + 27) + 'px'}}
+            style={{height: ((lineHeight * 70) + 70) + 'px'}}
         />
     </div>
     )
