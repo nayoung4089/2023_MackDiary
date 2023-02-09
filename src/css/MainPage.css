@@ -1,0 +1,15 @@
+.diary-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: -3000;
+    margin-bottom: 40px;
+}
+.big-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 3rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}

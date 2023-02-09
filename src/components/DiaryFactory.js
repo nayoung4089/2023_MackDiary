@@ -92,33 +92,34 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, strong, setStrong, deep
             ref={(canvasDraw)=>(saveableCanvas = canvasDraw)}
             saveData={saveData}
             canvasWidth={300}
-	        canvasHeight={150}
+	        canvasHeight={200}
             brushRadius={5}
             enablePanAndZoom
+            style={{padding:'20px 0'}}
             />
-            <div>
+            <h4>
                 <span>세기 </span>
                 <select name="strong" onChange={(event)=>{onChange(event,setStrong)}} value={strong}>
                     <option value="유력">유력</option>
                     <option value="무력">무력</option>
                 </select>
-            </div>
-            <div>
+            </h4>
+            <h4>
                 <span>위치 </span>
                 <select name="deep" onChange={(event)=>{onChange(event,setDeep)}} value={deep}>
                     <option value="부">부</option>
                     <option value="중">중</option>
                     <option value="침">침</option>
                 </select>
-            </div>
-            <div>
+            </h4>
+            <h4>
                 <span>빠르기 </span>
                 <select name="fast" onChange={(event)=>{onChange(event,setFast)}} value={fast}>
                     <option value="지">지</option>
                     <option value="평">평</option>
                     <option value="삭">삭</option>
                 </select>
-            </div>
+            </h4>
             <AutoHeightTextarea diary={diary} setDiary={setDiary} />
             <input type="submit" value="Save" />
         </form>

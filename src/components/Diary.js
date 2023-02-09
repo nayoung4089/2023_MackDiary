@@ -71,13 +71,13 @@ const Diary = ({userObj, diaryObj, isOwner}) => {
                 <div class="diary">
                 <h3>{diaryObj.date}</h3>
                 <h3>{diaryObj.title}</h3>
-                {diaryObj.attachmentUrl && <img src={diaryObj.attachmentUrl} width="300px" height="150px" alt="saved"/>}
+                {diaryObj.attachmentUrl && <img src={diaryObj.attachmentUrl} width="300px" height="200px" alt="saved"/>}
                 <h4>
                     <div>세기: {diaryObj.strong}</div>
                     <div>위치: {diaryObj.deep}</div>
                     <div>빠르기: {diaryObj.fast}맥</div>
                 </h4>
-                <div>{diaryObj.text}</div>
+                <div class="detail-box">{diaryObj.text}</div>
                 </div>
                 </>
                 )

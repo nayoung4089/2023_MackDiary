@@ -2,6 +2,7 @@ import DiaryFactory from "components/DiaryFactory";
 import DiaryPage from "components/DiaryPage";
 import { dbService } from "fbase";
 import React, { useEffect, useState } from "react";
+import "css/MainPage.css";
 
 const MainPage = ({ userObj }) => {
     // 기본 이미지들만 있다가 + 누르면 신규 생성 / 사진은 DiaryPage로 관리
