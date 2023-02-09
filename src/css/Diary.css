@@ -1,0 +1,13 @@
+.select-box{
+    font-size: 1.05rem;
+    font-weight: bold;
+    padding: 20px;
+    line-height: 25px;
+}
+.detail-box{
+    background-color: var(--maincolor);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: initial;
+}

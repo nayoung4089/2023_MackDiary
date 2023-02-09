@@ -75,7 +75,7 @@ button {
     margin: 0 5px 20px 5px;
     border-radius: 20px;
 }
-/* DiaryFactory & DiaryPage CSS */
+/* DiaryFactory & DiaryPage & Diary CSS  */
 .form-wrap, .diary-shown-wrap{
     position: absolute;
     top: 50%;
@@ -86,6 +86,8 @@ button {
     text-align: center;
     border-radius: 20px;
     z-index: 3000;
+    overflow-y: scroll;
+    max-height: 650px;
 }
 .bg{
     position: fixed;
@@ -106,18 +108,12 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance : none;
+    margin-right: 10px;
 }
 select::-ms-expand {
   display: none;
 }
-/* Diary.js */
-.detail-box{
-    background-color: var(--maincolor);
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-    text-align: initial;
-}
+
 /* 그림자 */
 .title-wrap, .nav :link, .card, .big-button, .image-button{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;

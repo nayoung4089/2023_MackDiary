@@ -103,16 +103,12 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, strong, setStrong, deep
                     <option value="유력">유력</option>
                     <option value="무력">무력</option>
                 </select>
-            </h4>
-            <h4>
                 <span>위치 </span>
                 <select name="deep" onChange={(event)=>{onChange(event,setDeep)}} value={deep}>
                     <option value="부">부</option>
                     <option value="중">중</option>
                     <option value="침">침</option>
                 </select>
-            </h4>
-            <h4>
                 <span>빠르기 </span>
                 <select name="fast" onChange={(event)=>{onChange(event,setFast)}} value={fast}>
                     <option value="지">지</option>

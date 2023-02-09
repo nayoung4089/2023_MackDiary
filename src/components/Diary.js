@@ -1,6 +1,7 @@
 import { dbService } from "fbase";
 import React, { useState } from "react";
 import DiaryFactory from "./DiaryFactory";
+import "css/Diary.css";
 
 const Diary = ({userObj, diaryObj, isOwner}) => {
     // 자세한 페이지 : 남의 거나 내거나 모두
@@ -72,11 +73,11 @@ const Diary = ({userObj, diaryObj, isOwner}) => {
                 <h3>{diaryObj.date}</h3>
                 <h3>{diaryObj.title}</h3>
                 {diaryObj.attachmentUrl && <img src={diaryObj.attachmentUrl} width="300px" height="200px" alt="saved"/>}
-                <h4>
+                <div class="select-box">
                     <div>세기: {diaryObj.strong}</div>
                     <div>위치: {diaryObj.deep}</div>
                     <div>빠르기: {diaryObj.fast}맥</div>
-                </h4>
+                </div>
                 <div class="detail-box">{diaryObj.text}</div>
                 </div>
                 </>
