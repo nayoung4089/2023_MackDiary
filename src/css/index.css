@@ -87,6 +87,8 @@ button {
     border-radius: 20px;
     z-index: 3000;
     overflow-y: scroll;
+    min-width: 300px;
+    min-height: 600px;
     max-height: 650px;
 }
 .bg{

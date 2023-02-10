@@ -42,7 +42,8 @@ const AutoHeightTextarea = ({diary, setDiary}) => {
             onChange={checkItemChangeHandler}
             onKeyDown={checkItemEnterHandler}
             style={{
-                width: '100%',
+                padding: '5%',
+                width: '90%',
                 height: ((lineHeight * 40) + 40) + 'px'}}
         />
     </div>

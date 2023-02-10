@@ -7,9 +7,9 @@ import "css/MainPage.css";
 const MainPage = ({ userObj }) => {
     // 기본 이미지들만 있다가 + 누르면 신규 생성 / 사진은 DiaryPage로 관리
     const [title, setTitle] = useState("");
-    const [strong, setStrong] = useState("");
-    const [deep, setDeep] = useState("");
-    const [fast, setFast] = useState("");
+    const [strong, setStrong] = useState("유력");
+    const [deep, setDeep] = useState("부");
+    const [fast, setFast] = useState("지");
     const [diary, setDiary] = useState("특이점:\n\n부:\n중:\n침:");
     let [attachment, setAttachment] = useState("");
     const [diaries, setDiaries] = useState([]);
