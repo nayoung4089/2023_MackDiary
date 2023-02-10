@@ -101,6 +101,7 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, strong, setStrong, deep
                 <span>세기 </span>
                 <select name="strong" onChange={(event)=>{onChange(event,setStrong)}} value={strong}>
                     <option value="유력">유력</option>
+                    <option value="평">평</option>
                     <option value="무력">무력</option>
                 </select>
                 <span>위치 </span>
