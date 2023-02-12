@@ -37,7 +37,7 @@ const DiaryFactory = ({ saveableCanvas, title, setTitle, strong, setStrong, deep
             deep: deep,
             fast: fast,
             text: diary,
-            createdAt: nowDate,
+            createdAt: new Date(),
             date: `${nowDate.getFullYear()}년 ${nowDate.getMonth()+1}월 ${nowDate.getDate()}일`,
             createrId: userObj.uid,
             attachmentUrl: attachment,
