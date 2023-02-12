@@ -6,7 +6,7 @@ const Global = ({ userObj }) => {
     const [diaries, setDiaries] = useState([]);
     useEffect(()=> {
         // snapshot은 실시간으로 변함
-        dbService.collection("diaries").onSnapshot(snapshot => {
+        dbService.collection("diaries").orderBy("createdAt", "desc").onSnapshot(snapshot => {
             const diaryArray = snapshot.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data(),
