@@ -10,7 +10,7 @@ const MainPage = ({ userObj }) => {
     const [strong, setStrong] = useState("유력");
     const [deep, setDeep] = useState("부");
     const [fast, setFast] = useState("지");
-    const [diary, setDiary] = useState("특이점:\n\n부:\n중:\n침:");
+    const [diary, setDiary] = useState("🌟특이점🌟 \n\n부➡️ \n중➡️ \n침➡️ ");
     let [attachment, setAttachment] = useState("");
     const [diaries, setDiaries] = useState([]);
     const [make, setMake] = useState(false);

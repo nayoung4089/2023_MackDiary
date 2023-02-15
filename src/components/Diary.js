@@ -75,7 +75,7 @@ const Diary = ({userObj, diaryObj, isOwner}) => {
                 {diaryObj.attachmentUrl && <img src={diaryObj.attachmentUrl} width="300px" height="200px" alt="saved"/>}
                 <div class="select-box">
                     <div>세기: {diaryObj.strong}</div>
-                    <div>위치: {diaryObj.deep}</div>
+                    <div>위치: {diaryObj.deep}맥</div>
                     <div>빠르기: {diaryObj.fast}맥</div>
                 </div>
                 <div class="detail-box">{diaryObj.text}</div>
